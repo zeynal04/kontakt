@@ -23,10 +23,35 @@ const Slider = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentSlide((prev) => (prev + 1) % slides.length);
-        }, 2000); // 3 saniyə sonra keçid
+        }, 3500); // 3 saniyə sonra keçid
 
         return () => clearInterval(interval); // Təmizləmə
     }, []);
+
+    const handleKeyDown = (event) => {
+        if (event.key === 'ArrowRight') {
+            setCurrentSlide((prev) => (prev + 1) % slides.length);
+        } else if (event.key === 'ArrowLeft') {
+            setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('keydown', handleKeyDown);
+        return () => {
+            window.removeEventListener('keydown', handleKeyDown);
+        };
+    }, []);
+    
+
+
+
+
+
+
+
+
+
 
     return (
 

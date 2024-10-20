@@ -44,7 +44,7 @@ body{
     letter-spacing: -0.03em;
 }
 .secBottom{
-
+height: fit-content;
     padding: 30px !important;
 }
 .texts p,li{
