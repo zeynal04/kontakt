@@ -7,10 +7,8 @@ const Language = () => {
   const toggleDropdown = () => setIsOpen(!isOpen);
 
   return (
-    <div className="p-4 flex w-1/4 bg-red-900 text-center place-content-center">
-      <p className="text-lg mb-4">
-        salam
-      </p>
+    <div className=" flex   text-center place-content-center">
+     
 
       <div className=" relative inline-block text-right">
         <div>
@@ -46,8 +44,8 @@ const Language = () => {
             aria-labelledby="menu-button"
             tabIndex="-1"
           >
-            <div className="py-1 rounded-md  bg-yellow-400" role="none">
-              <a href="#" className="block    px-4 py-2 text-sm text-gray-700" role="menuitem" tabIndex="-1" id="menu-item-1">RU</a>
+            <div className="py-1 rounded-md  " role="none">
+              <a href="#" className="block  text-left  px-4 py-2 text-sm text-gray-700" role="menuitem" tabIndex="-1" id="menu-item-1">RU</a>
             </div>
           </div>
         )}
